@@ -343,3 +343,17 @@ button[type="submit"]:hover {
   cursor: pointer;
   font-weight: bold;
 }
+
+@media (max-width: 600px) {
+    .btn {
+    margin-top: 1em;
+    width: 5em;
+    height: 3.5em;
+    border-radius: 3em;
+    text-align: center;
+    font-size: 1rem; 
+    border: 2px solid rgb(124, 42, 42);
+    background-color: white;
+    font-family: 'Delius', cursive;
+}
+}
