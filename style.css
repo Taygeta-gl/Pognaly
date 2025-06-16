@@ -44,12 +44,6 @@ background-color: #B2BAD8;
     left: 400px;
 }
 
-#contactPopUp {
-    display: inline-block; 
-    padding: 10px; 
-    cursor: pointer; 
-}
-
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -290,6 +284,16 @@ transform: translate(-50%, 40%);
   align-items: center;
   z-index: 1000;
 }
+#contact-title-me {
+  position: absolute;
+  top: 150%; 
+    left: 50%;
+    transform: translate(-50%, 400%);
+ 
+  font-weight: 200;
+  font-size: 2em;
+}
+
 
 .contact-container {
   background: white;
@@ -343,12 +347,28 @@ button[type="submit"]:hover {
   cursor: pointer;
   font-weight: bold;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 @media (max-width: 600px) {
+    .topButtons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    }
+
+
+    .leftBtn {
+    flex-direction: column;
+    gap: 1em;
+    }
+
     .btn {
     margin-top: 1em;
     width: 5em;
-    height: 3.5em;
+    height: 4em;
     border-radius: 3em;
     text-align: center;
     font-size: 1rem; 
@@ -356,4 +376,304 @@ button[type="submit"]:hover {
     background-color: white;
     font-family: 'Delius', cursive;
 }
+.content {
+    position: absolute;     /* Let it flow naturally */
+    width: 18%;             /* Take 90% of screen */
+    height: auto;           /* Allow content height to grow */
+    margin: 2em auto;       /* Center it */
+    transform: none;        /* Reset translate */
+    border-radius: 20px;
+  }
+  
+  .introMe {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13.5px;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-65%, -30%);
+    width: 340%;
+    
+  }
+
+  #pp {
+    position: absolute;
+    height: 160px; /*To not strech the pic, set height and width auto*/
+    width: auto; 
+    opacity: 100%;
+    border-radius: 50%;
+    border: 0.4em solid rgba(251, 252, 255, 0.49); 
+    /*top and left works for Absolute only*/
+    top: 0%;
+    left:0%;/*50% right from parent's width. so now it's a bit more down and right, so you have to fix this*/
+
+    transform: translate(-50%, -150%); /*50 up from its own height and left from its own width*/
+  }
+
+  #crown {
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 0%;
+    left: 50%;
+    transform: translate(-95%, -490%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+
+#crown:hover {
+    animation: shake 0.6s ease-in-out;
 }
+
+@keyframes shake {
+  0% { transform: translate(-95%, -500%); }
+  25% { transform: translate(-97%, -500%); }
+  50% { transform: translate(-93%, -500%); }
+  75% { transform: translate(-97%, -500%); }
+  100% { transform: translate(-95%, -500%); }
+}
+
+
+.lionPaw {
+    position: absolute;
+    rotate: -45deg; /*hehe I guessed it right*/
+    top: 500px;
+    left: 370px;
+    width: 70px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* dark translucent overlay */
+  z-index: 1000; /* on top */
+  overflow: auto; /* let modal content scroll if long */
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  margin: 10% auto; /* 10% from top, centered horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.skillPicture {
+    position: absolute;
+    top: 0px;
+    left: 30%;
+    height: 18em;
+    width: 30%;
+    transform: translate(0%, -20%);
+}
+
+#lionPaws {
+    position: absolute;
+    top: -100px;
+    width: 70%;
+}
+
+#clawPrint {
+     position: absolute;
+    top: -10px;
+    left: 70px;
+    width: 50%;
+}
+
+#svgContainer {
+    display: inline-block; 
+    padding: 10px; 
+    cursor: pointer;
+}
+
+
+
+  .skillsTitle {
+    text-align: center;
+  }
+
+  .horn {
+    position: absolute;
+    height: 15%;
+    width: auto;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, 40%);
+  }
+
+#leftHorn {
+    transform: translate(-140%, 20%);
+}
+
+#rightHorn {
+    transform: translate(50%, 20%);
+}
+
+.prj {
+  left: 50%;
+  top: 80%;
+  transform: translate(-47%, 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 60%;
+  height: 30%;
+}
+
+
+.projetTitle {
+    position: absolute;
+    text-align: center;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-40%, 230%);
+    font-weight: 200;
+    font-size: 2em;
+}
+
+  .symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    height: 35%;
+    width: auto;
+}
+
+.carouselBTN {
+    position: absolute;
+    top: 100%; 
+    left: 47%;
+    width: 10%;
+    height: auto;
+}
+
+#leftBtn {
+    transform: translate(-430%, 230%);
+}
+#rightBtn {
+    transform: translate(420%, 230%);
+}
+
+.prj.active {
+  display: block;
+  opacity: 1;
+}
+
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* dark transparent background */
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#contact-title-me {
+  position: absolute;
+  top: 150%;
+  left: 43%;
+  transform: translate(-30%, 50%);
+ 
+  font-weight: 200;
+  font-size: 2em;
+}
+
+
+.contact-container {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-left-title h2 {
+  margin: 0 0 20px 0;
+}
+
+.contact-inputs {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+
+
+}
+
+@media (max-width: 1024px) {
+
+
+.carouselBTN {
+    position: absolute;
+    top: 100%; 
+    left: 47%;
+    width: 9%;
+    height: auto;
+}
+
+#leftBtn {
+    transform: translate(-415%, 350%);
+}
+#rightBtn {
+    transform: translate(385%, 350%);
+}
+
+}
+
+
+/** {
+  box-sizing: border-box;
+  outline: 1px dashed rgba(255, 0, 0, 0.3);
+}*/

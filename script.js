@@ -70,7 +70,7 @@ document.getElementById("prj").addEventListener("click", function () {
 // the scroll down when button Projects is clicked
 document.getElementById("prj").addEventListener("click", function () {
   const element = document.getElementById("projectsSection");
-  const offset = -500; // change this value to scroll further (e.g., 200, 300, etc.)
+  const offset = window.innerWidth <= 768 ? -230 : -500; // change this value to scroll further (e.g., 200, 300, etc.)
   const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
 
   window.scrollTo({
@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Scroll for contact button
 document.getElementById("contact").addEventListener("click", function() {
 const element = document.getElementById("contact-section");
-const offset = -500;
+const offset = -400;
 const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
 
 window.scrollTo({
