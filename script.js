@@ -332,7 +332,7 @@ form.addEventListener("submit", function (e) {
     })
     .catch(error => {
       console.error("Error:", error);
-      responseMsg.textContent = "Error sending the message.";
+      responseMsg.textContent = "Error sending the message. Please try later.";
       responseMsg.style.color = "red";
     });
 });
