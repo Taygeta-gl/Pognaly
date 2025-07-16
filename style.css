@@ -274,11 +274,13 @@ transform: translate(-50%, 40%);
 .prj {
   opacity: 0;
   transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
 .prj.active {
   display: block;
   opacity: 1;
+  pointer-events: auto; 
 }
 
 
