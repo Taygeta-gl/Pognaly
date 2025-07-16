@@ -3,6 +3,20 @@
 const pp = document.getElementById('pp');
 pp.addEventListener('dblclick', () => createSparklesAround(pp, 12));
 
+ document.getElementById('about').addEventListener('click', function () {
+      const box = document.getElementById('aboutBox');
+
+      // Show the box
+      box.style.display = 'block';
+
+      // Clear any previous timers to avoid overlap
+      if (box.hideTimeout) clearTimeout(box.hideTimeout);
+
+      // Set timeout to hide after 5 seconds
+      box.hideTimeout = setTimeout(() => {
+        box.style.display = 'none';
+      }, 5000);
+    });
 
 function createSparklesAround(element, count = 8) {
   const rect = element.getBoundingClientRect();
